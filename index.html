@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnPro | The Advanced JS Experience</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <style>
+      .gradient-text {
+        background: linear-gradient(to right, #facc15, #eab308);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+  >
+    <nav
+      class="flex justify-between items-center p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-md sticky top-0 z-50 border-b dark:border-gray-700"
+    >
+      <a href="index.html" class="text-2xl font-black gradient-text"
+        >LearnPro</a
+      >
+      <div
+        class="space-x-8 hidden md:flex font-bold text-sm uppercase tracking-widest"
+      >
+        <a href="index.html" class="text-yellow-500">Home</a>
+        <a href="wiki.html" class="hover:text-yellow-500 transition">JS Wiki</a>
+        <a href="quiz.html" class="hover:text-yellow-500 transition"
+          >Challenges</a
+        >
+        <a href="submission.html" class="hover:text-yellow-500 transition"
+          >Community</a
+        >
+      </div>
+      <div class="flex items-center gap-4">
+        <a href="profile.html" class="hidden sm:block hover:opacity-80">
+          <img
+            id="nav-avatar"
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
+            class="w-10 h-10 rounded-full border-2 border-yellow-500"
+          />
+        </a>
+        <button
+          id="theme-toggle"
+          class="p-2 bg-gray-100 dark:bg-gray-700 rounded-xl"
+        >
+          🌙
+        </button>
+      </div>
+    </nav>
+
+    <header class="relative py-24 px-6 overflow-hidden">
+      <div class="max-w-6xl mx-auto text-center relative z-10">
+        <span
+          class="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest"
+          >New: JS 2026 Curriculum</span
+        >
+        <h1 class="text-5xl md:text-7xl font-black mt-6 mb-6 leading-tight">
+          Master JavaScript <br /><span class="gradient-text"
+            >Through Interaction.</span
+          >
+        </h1>
+        <p
+          class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto text-lg mb-10"
+        >
+          The only platform combining a 100-article encyclopedia, interactive
+          coding labs, and a competitive community forum.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="lesson.html"
+            class="bg-yellow-500 text-black px-10 py-4 rounded-2xl font-black hover:bg-yellow-400 transition transform hover:-translate-y-1 shadow-lg shadow-yellow-500/20"
+            >Start Coding Now</a
+          >
+          <a
+            href="#about"
+            class="bg-white dark:bg-gray-800 border dark:border-gray-700 px-10 py-4 rounded-2xl font-black hover:bg-gray-100 dark:hover:bg-gray-700 transition"
+            >Learn More</a
+          >
+        </div>
+      </div>
+      <div
+        class="absolute -top-24 -left-24 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl"
+      ></div>
+    </header>
+
+    <section id="about" class="py-20 bg-white dark:bg-gray-800/50">
+      <div
+        class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center"
+      >
+        <div>
+          <h2 class="text-4xl font-black mb-6">
+            Why <span class="text-yellow-500">LearnPro?</span>
+          </h2>
+          <p class="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
+            Most platforms just show you video. We give you a **complete
+            ecosystem**. Whether you are a total beginner or an expert looking
+            to master advanced closures, our system adapts to your speed.
+          </p>
+          <ul class="space-y-4">
+            <li class="flex items-center gap-3">
+              <span class="bg-green-500 text-white rounded-full p-1 text-xs"
+                >✓</span
+              >
+              <span class="font-bold">100+ Encyclopedia Articles</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="bg-green-500 text-white rounded-full p-1 text-xs"
+                >✓</span
+              >
+              <span class="font-bold">Real-time Code Execution</span>
+            </li>
+            <li class="flex items-center gap-3">
+              <span class="bg-green-500 text-white rounded-full p-1 text-xs"
+                >✓</span
+              >
+              <span class="font-bold">Community-driven Problem Solving</span>
+            </li>
+          </ul>
+        </div>
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-yellow-500 p-8 rounded-3xl text-black">
+            <h3 class="text-4xl font-black">100+</h3>
+            <p class="font-bold uppercase text-xs opacity-80">Articles</p>
+          </div>
+          <div class="bg-gray-900 p-8 rounded-3xl text-white">
+            <h3 class="text-4xl font-black" id="user-count">2.4k</h3>
+            <p class="font-bold uppercase text-xs opacity-50">Students</p>
+          </div>
+          <div class="bg-gray-100 dark:bg-gray-700 p-8 rounded-3xl col-span-2">
+            <h3 class="text-xl font-black mb-2">Interactive Learning</h3>
+            <div
+              class="h-2 bg-gray-200 dark:bg-gray-600 rounded-full overflow-hidden"
+            >
+              <div class="bg-yellow-500 w-3/4 h-full"></div>
+            </div>
+            <p class="text-xs mt-2 text-gray-500">
+              75% of users master JS in 30 days
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="lessons" class="py-20 max-w-6xl mx-auto px-6">
+      <div
+        class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4"
+      >
+        <div>
+          <h2 class="text-3xl font-black">
+            Ready to <span class="text-yellow-500">Level Up?</span>
+          </h2>
+          <p class="text-gray-500">Pick a module and start your journey.</p>
+        </div>
+        <div class="flex bg-gray-100 dark:bg-gray-800 p-1 rounded-xl">
+          <button
+            class="px-6 py-2 bg-white dark:bg-gray-700 rounded-lg font-bold shadow-sm"
+          >
+            All
+          </button>
+          <button class="px-6 py-2 hover:opacity-50 font-bold transition">
+            Basics
+          </button>
+          <button class="px-6 py-2 hover:opacity-50 font-bold transition">
+            Advanced
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="lesson-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+      ></div>
+    </section>
+
+    <footer
+      class="bg-white dark:bg-gray-800 border-t dark:border-gray-700 py-12 px-6"
+    >
+      <div
+        class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6"
+      >
+        <p class="text-gray-500 font-bold">
+          © 2026 LearnPro JS Education platform.
+        </p>
+        <div class="flex gap-6 text-sm font-black uppercase tracking-widest">
+          <a href="#" class="hover:text-yellow-500">Twitter</a>
+          <a href="#" class="hover:text-yellow-500">GitHub</a>
+          <a href="#" class="hover:text-yellow-500">Discord</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

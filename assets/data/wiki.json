@@ -1,0 +1,23 @@
+[
+  {
+    "id": "intro-to-js",
+    "title": "What is JavaScript?",
+    "category": "Basics",
+    "content": "JavaScript is a high-level, interpreted programming language...",
+    "tags": ["Beginner", "Web"]
+  },
+  {
+    "id": "arrow-functions",
+    "title": "Arrow Functions Explained",
+    "category": "ES6",
+    "content": "Introduced in ES6, arrow functions allow us to write shorter function syntax...",
+    "tags": ["Intermediate", "Syntax"]
+  },
+  {
+    "id": "async-await",
+    "title": "Mastering Async/Await",
+    "category": "Asynchronous",
+    "content": "Async/Await makes asynchronous code look and behave a bit more like synchronous code...",
+    "tags": ["Advanced", "Promises"]
+  }
+]

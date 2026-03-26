@@ -1,0 +1,41 @@
+/* Light Mode */
+body {
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --header-bg: #2563eb;
+  --card-bg: #ffffff;
+  --button-bg: #10b981;
+  --button-text: #ffffff;
+}
+
+/* Dark Mode */
+body.dark {
+  --bg-color: #111827;
+  --text-color: #f9fafb;
+  --header-bg: #1e3a8a;
+  --card-bg: #1f2937;
+  --button-bg: #10b981;
+  --button-text: #ffffff;
+}
+
+/* Apply variables */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+header {
+  background-color: var(--header-bg);
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+}
+
+/* Cards */
+.lesson-card,
+.quiz-card,
+.submission-entry {
+  background-color: var(--card-bg);
+}

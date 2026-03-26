@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnPro | Interactive Lesson</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white h-screen flex flex-col overflow-hidden"
+  >
+    <nav
+      class="flex justify-between items-center p-4 bg-white dark:bg-gray-800 shadow-sm shrink-0"
+    >
+      <div class="flex items-center gap-4">
+        <a href="index.html" class="text-xl font-bold text-yellow-500"
+          >LearnPro</a
+        >
+        <span
+          id="lesson-title"
+          class="hidden md:block border-l pl-4 text-gray-400 text-sm italic"
+          >Loading Lesson...</span
+        >
+      </div>
+      <div class="flex gap-2">
+        <button
+          id="prev-btn"
+          class="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg disabled:opacity-30"
+        >
+          ←
+        </button>
+        <button
+          id="next-btn"
+          class="p-2 bg-gray-100 dark:bg-gray-700 rounded-lg"
+        >
+          Next →
+        </button>
+      </div>
+    </nav>
+
+    <main class="flex-1 flex flex-col md:flex-row overflow-hidden">
+      <section
+        class="w-full md:w-1/2 overflow-y-auto p-6 md:p-10 border-r dark:border-gray-700"
+      >
+        <div id="lesson-content" class="prose dark:prose-invert max-w-none">
+          <div class="animate-pulse">
+            <div
+              class="h-8 bg-gray-200 dark:bg-gray-700 rounded w-3/4 mb-4"
+            ></div>
+            <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+            <div class="h-4 bg-gray-200 dark:bg-gray-700 rounded mb-2"></div>
+          </div>
+        </div>
+
+        <button
+          id="bookmark-btn"
+          class="mt-10 flex items-center gap-2 text-sm text-gray-500 hover:text-yellow-500 transition"
+        >
+          <span id="bookmark-icon">☆</span> Save for later
+        </button>
+      </section>
+
+      <section class="w-full md:w-1/2 flex flex-col bg-gray-900">
+        <div
+          class="flex justify-between items-center px-4 py-2 bg-gray-800 text-xs text-gray-400 uppercase tracking-widest"
+        >
+          <span>Interactive Console</span>
+          <button
+            id="run-btn"
+            class="bg-yellow-500 text-black px-4 py-1 rounded font-bold hover:bg-yellow-400"
+          >
+            Run Code
+          </button>
+        </div>
+
+        <textarea
+          id="code-editor"
+          class="flex-1 bg-gray-900 text-green-400 p-6 font-mono text-sm outline-none resize-none"
+          spellcheck="false"
+        ></textarea>
+
+        <div
+          id="output-panel"
+          class="h-1/3 border-t border-gray-800 bg-black p-4 overflow-y-auto"
+        >
+          <div class="text-xs text-gray-500 mb-2 font-bold">Output:</div>
+          <pre
+            id="console-output"
+            class="font-mono text-sm text-white opacity-90"
+          >
+> System ready...</pre
+          >
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/lessons.js"></script>
+  </body>
+</html>

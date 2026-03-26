@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnPro | My Profile</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+  >
+    <nav
+      class="flex justify-between items-center p-6 bg-white dark:bg-gray-800 shadow-sm"
+    >
+      <a href="index.html" class="text-2xl font-bold text-yellow-500"
+        >LearnPro</a
+      >
+      <div class="space-x-4">
+        <a href="index.html" class="hover:text-yellow-500">Home</a>
+        <button id="logout-btn" class="text-red-500 text-sm font-bold">
+          Logout
+        </button>
+      </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto p-6 mt-10">
+      <div
+        class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl flex flex-col md:flex-row items-center gap-8 mb-8 border border-gray-100 dark:border-gray-700"
+      >
+        <div class="relative">
+          <img
+            id="profile-pic"
+            src="https://api.dicebear.com/7.x/avataaars/svg?seed=Felix"
+            alt="Avatar"
+            class="w-32 h-32 rounded-full bg-yellow-100 p-2"
+          />
+          <button
+            class="absolute bottom-0 right-0 bg-yellow-500 p-2 rounded-full text-xs"
+          >
+            ✏️
+          </button>
+        </div>
+        <div class="text-center md:text-left flex-1">
+          <h2 id="user-name" class="text-3xl font-extrabold">JS Learner</h2>
+          <p id="user-email" class="text-gray-500 dark:text-gray-400">
+            learner@learnpro.com
+          </p>
+          <div class="mt-4 flex flex-wrap gap-2">
+            <span
+              class="bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-400 px-3 py-1 rounded-full text-xs font-bold"
+              >Level 1: Novice</span
+            >
+            <span
+              id="rank-badge"
+              class="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 px-3 py-1 rounded-full text-xs font-bold"
+              >Active Student</span
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md text-center border-b-4 border-yellow-500"
+        >
+          <p class="text-gray-500 text-sm uppercase font-bold">Quizzes Done</p>
+          <h3 id="stat-quizzes" class="text-4xl font-black mt-2">0</h3>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md text-center border-b-4 border-green-500"
+        >
+          <p class="text-gray-500 text-sm uppercase font-bold">Total Points</p>
+          <h3 id="stat-points" class="text-4xl font-black mt-2">0</h3>
+        </div>
+        <div
+          class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-md text-center border-b-4 border-blue-500"
+        >
+          <p class="text-gray-500 text-sm uppercase font-bold">Lessons View</p>
+          <h3 id="stat-lessons" class="text-4xl font-black mt-2">0</h3>
+        </div>
+      </div>
+
+      <section class="bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl">
+        <h3 class="text-xl font-bold mb-6">Learning Progress</h3>
+
+        <div class="space-y-6">
+          <div>
+            <div class="flex justify-between mb-2">
+              <span class="font-medium">JavaScript Mastery</span>
+              <span id="percent-text" class="text-yellow-500 font-bold"
+                >0%</span
+              >
+            </div>
+            <div
+              class="w-full bg-gray-200 dark:bg-gray-700 h-4 rounded-full overflow-hidden"
+            >
+              <div
+                id="mastery-bar"
+                class="bg-yellow-500 h-full transition-all duration-1000"
+                style="width: 0%"
+              ></div>
+            </div>
+          </div>
+
+          <div id="recent-activity" class="mt-10">
+            <h4
+              class="text-gray-400 font-bold text-sm uppercase mb-4 tracking-widest"
+            >
+              Recent Activity
+            </h4>
+            <ul id="activity-list" class="space-y-4">
+              <li class="text-gray-500 italic text-sm">
+                No activity recorded yet. Start a lesson!
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/user.js"></script>
+  </body>
+</html>

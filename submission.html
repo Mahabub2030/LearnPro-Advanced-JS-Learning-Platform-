@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnPro | Submit a Problem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body
+    class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300"
+  >
+    <nav
+      class="flex justify-between items-center p-6 bg-white dark:bg-gray-800 shadow-sm"
+    >
+      <a href="index.html" class="text-2xl font-bold text-yellow-500"
+        >LearnPro</a
+      >
+      <div class="space-x-6">
+        <a href="index.html" class="hover:text-yellow-500">Home</a>
+        <a href="profile.html" class="hover:text-yellow-500">Profile</a>
+      </div>
+    </nav>
+
+    <main
+      class="max-w-6xl mx-auto p-6 mt-10 grid grid-cols-1 lg:grid-cols-3 gap-10"
+    >
+      <section class="lg:col-span-1">
+        <div
+          class="bg-white dark:bg-gray-800 p-8 rounded-3xl shadow-xl sticky top-24 border border-gray-100 dark:border-gray-700"
+        >
+          <h2 class="text-2xl font-bold mb-2">Stuck on Code? 💡</h2>
+          <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm">
+            Submit your problem and the community (or your future self) will
+            help!
+          </p>
+
+          <form id="problem-form" class="space-y-4">
+            <div>
+              <label class="block text-sm font-bold mb-1">Problem Title</label>
+              <input
+                type="text"
+                id="prob-title"
+                placeholder="e.g., Closure scope issue"
+                required
+                class="w-full p-3 rounded-xl border dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-yellow-500 outline-none"
+              />
+            </div>
+            <div>
+              <label class="block text-sm font-bold mb-1">Description</label>
+              <textarea
+                id="prob-desc"
+                rows="3"
+                placeholder="Describe what's happening..."
+                required
+                class="w-full p-3 rounded-xl border dark:bg-gray-700 dark:border-gray-600 focus:ring-2 focus:ring-yellow-500 outline-none"
+              ></textarea>
+            </div>
+            <div>
+              <label class="block text-sm font-bold mb-1"
+                >Code Snippet (Optional)</label
+              >
+              <textarea
+                id="prob-code"
+                rows="5"
+                placeholder="Paste your JS code here..."
+                class="w-full p-3 font-mono text-sm bg-gray-900 text-green-400 rounded-xl outline-none"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="w-full bg-yellow-500 text-black font-bold py-3 rounded-xl hover:bg-yellow-400 transition transform active:scale-95"
+            >
+              Post Problem
+            </button>
+          </form>
+        </div>
+      </section>
+
+      <section class="lg:col-span-2">
+        <div class="flex justify-between items-center mb-6">
+          <h3 class="text-2xl font-bold">Community Discussion</h3>
+          <span
+            id="post-count"
+            class="bg-gray-200 dark:bg-gray-700 px-3 py-1 rounded-full text-xs font-bold"
+            >0 Posts</span
+          >
+        </div>
+
+        <div id="submissions-list" class="space-y-6">
+          <div class="text-center py-20 opacity-50">
+            <p>No problems submitted yet. Be the first!</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/js/submission.js"></script>
+  </body>
+</html>

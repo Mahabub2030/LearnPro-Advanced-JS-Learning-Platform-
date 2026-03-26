@@ -1,0 +1,75 @@
+/* Tailwind base classes will handle most styling.
+   Add custom overrides here. */
+
+/* General body font & spacing */
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+}
+
+/* Header styling */
+header a {
+  transition: color 0.2s;
+}
+
+header a:hover {
+  color: #ffd700; /* Golden hover effect */
+}
+
+/* Lesson cards in home page */
+.lesson-card {
+  @apply bg-white dark:bg-gray-800 rounded-lg shadow p-4 transition hover:scale-105;
+}
+
+.lesson-card h3 {
+  @apply font-bold text-lg;
+}
+
+.lesson-card p {
+  @apply text-gray-700 dark:text-gray-300;
+}
+
+/* Buttons */
+button {
+  @apply transition transform hover:scale-105;
+}
+
+/* Interactive code editor */
+#codeEditor {
+  font-family: monospace;
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Code output box */
+#codeOutput {
+  font-family: monospace;
+  white-space: pre-wrap;
+}
+
+/* Quiz container */
+.quiz-card {
+  @apply p-4 border rounded bg-gray-100 dark:bg-gray-700;
+}
+
+/* Submission entries */
+.submission-entry {
+  @apply p-4 border-l-4 border-blue-600 rounded bg-gray-50 dark:bg-gray-800;
+}
+
+/* Smooth transitions for the quiz cards */
+#quiz-card {
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+button:not(:disabled):active {
+  transform: scale(0.98);
+}
+
+/* Dark mode tweaks */
+.dark #score-display {
+  background-color: rgba(254, 240, 138, 0.1);
+  color: #facc15;
+}
