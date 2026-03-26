@@ -2,7 +2,7 @@
 
 LearnPro is a modern, interactive web platform designed to take users from JavaScript basics to advanced mastery. Unlike traditional tutorials, LearnPro combines a comprehensive 100-article encyclopedia with a real-time code playground and a community-driven problem-solving hub.
 
-![LearnPro Preview](https://via.placeholder.com/800x400?text=LearnPro+Platform+Interface)
+![LearnPro Preview](./assets/img/image.png)
 
 ---
 
